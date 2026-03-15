@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Painel FF HS Pescoço</title>
+
+<style>
+body{
+background:#0f0f0f;
+font-family:Arial;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.painel{
+background:#1c1c1c;
+border-radius:15px;
+width:280px;
+padding:20px;
+box-shadow:0 0 20px #ff0000;
+}
+
+h2{
+text-align:center;
+color:#ff3c3c;
+}
+
+.botao{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:10px;
+background:#ff3c3c;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+.botao:hover{
+background:#ff0000;
+}
+
+.status{
+margin-top:10px;
+text-align:center;
+color:#00ff7b;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="painel">
+
+<h2>Painel FF</h2>
+
+<button class="botao" onclick="ativarHS()">Ativar HS Pescoço</button>
+
+<button class="botao" onclick="desativarHS()">Desativar HS</button>
+
+<div class="status" id="status">Status: Desligado</div>
+
+</div>
+
+<script>
+
+function ativarHS(){
+document.getElementById("status").innerHTML="Status: HS Pescoço Ativado";
+}
+
+function desativarHS(){
+document.getElementById("status").innerHTML="Status: Desligado";
+}
+
+</script>
+
+</body>
+</html>
